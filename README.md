@@ -87,15 +87,14 @@ Prelauncher is ready-made for a quick and easy [Heroku] deployment. These are th
 
 ## Contributing
 
-A) Do it yourself
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-B) Ask a question
-Just open an issue. You'll also find me at [@thomasjklemm](https://twitter.com/thomasjklemm) and by mail at github_at_tklemm_dot_eu.
+
+If you have questions, just open an issue. You'll also find me at [@thomasjklemm](https://twitter.com/thomasjklemm) and by mail at github_at_tklemm_dot_eu.
 
 Thomas Klemm
 
