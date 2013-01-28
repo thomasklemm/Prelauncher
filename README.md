@@ -11,14 +11,17 @@ A nice and easily deployable prelaunch signup page for your startup.
     $ bundle update
     ```
 
-- Install [Pow](http://www.plugingeek.com/repos/37signals/pow) if you haven't already.
-- Install [Powder](http://www.plugingeek.com/repos/rodreegez/powder) if you haven't already and link the app.
-    ```shell
-    $ gem install powder
-    $ powder link
-    ```
+- If you are on a Mac:
+    - Install [Pow](http://www.plugingeek.com/repos/37signals/pow) if you haven't already.
+    - Install [Powder](http://www.plugingeek.com/repos/rodreegez/powder) if you haven't already and link the app.
+        ```shell
+        $ gem install powder
+        $ powder link
+        ```
+    - Browse to `http://folder_name.dev` and see if everything is working.
 
-- Browse to `http://folder_name.dev` and see if everything is working.
+- Else
+    - Just run the `$ rails s` and point your browser to `localhost:3000`.
 
 ## Customizing
 
@@ -83,7 +86,16 @@ Prelauncher is ready-made for a quick and easy [Heroku] deployment. These are th
 - Add New Relic availability monitoring to prevent dyno idling. Go to New Relic from your Heroku apps page and set it in Settings > Availibility Monitoring. Every 10 minutes is plenty.
 
 ## Contributing
-Just send a PR or open an issue. You'll find me here, at [@thomasjklemm](https://twitter.com/thomasjklemm) and by mail at github_at_tklemm_dot_eu.
+
+A) Do it yourself
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+B) Ask a question
+Just open an issue. You'll also find me at [@thomasjklemm](https://twitter.com/thomasjklemm) and by mail at github_at_tklemm_dot_eu.
 
 Thomas Klemm
 
