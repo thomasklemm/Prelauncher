@@ -1,0 +1,175 @@
+// Experiments in SASS
+//
+// Our very own variables
+$body-fonts: 'proxima-nova', Arial, 'Helvetica Neue', Helvetica, sans-serif
+$text: #393939        // primary text
+$muted-text: #7f7f7f  // muted text
+$radius: 2px          // default border radius
+
+// Colors
+$primary: #04569E
+
+// Backgrounds
+$body-background: image-url('backgrounds/linen.png')
+$flash-message-background: rgba($primary, 0.15)
+
+// Grid settings
+//
+// $column: 90px        // The width of a single column in px or em.
+// $gutter: 30px        // Space between each two columns in px or em.
+// $grid-columns: 12    // Total number of columns in the base grid. Defaults to 12.
+$max-width: 992px    // The maximum width of the outer container in px or em.
+
+// Visual grid settings
+//
+// By setting $visual-grid to true, you can display the base grid in the background (default)
+// or as an overlay. You can even change the color and opacity of the gridlines by overriding
+// the default settings as detailed in the section below. Keep in mind that on Webkit, rounding
+// errors in the fluid grid might result in the overlay being few pixels off.
+//
+// The visual grid reflects the changes applied to the grid via the new-breakpoint() mixin,
+// as long as the media contexts are defined before importing Neat.
+//
+// $visual-grid: true            // Show the base grid when set to true. Defaults to false.
+$visual-grid-color: #555   // Visual grid color. Defaults to #EEEEEE.
+// $visual-grid-index: 'front'   // If set to front, the grid is overlaid on the content.
+$visual-grid-opacity: 0.4     // Visual grid opacity.
+
+// Import grid helpers
+@import 'neat'
+
+// general
+body
+  padding: 0 16px // make body stay way from bowser edges
+  font-family: $body-fonts
+  font-size: 100%
+  line-height: 1.67
+  color: $text
+  background: $body-background
+
+// unordered lists
+ul
+  padding: 0
+  margin: 0
+  &.none
+    list-style: none
+
+// Font Awesome Icons
+i
+  margin-right: 4px
+
+// Layouting
+.container
+  @include outer-container
+
+// Column sizes
+// e.g. for sizing forms
+.one.column, .one.columns
+  @include span-columns(1)
+.two.columns
+  @include span-columns(2)
+.three.columns
+  @include span-columns(3)
+.four.columns
+  @include span-columns(4)
+.five.columns
+  @include span-columns(5)
+.six.columns
+  @include span-columns(6)
+.seven.columns
+  @include span-columns(7)
+.eight.columns
+  @include span-columns(8)
+.nine.columns
+  @include span-columns(9)
+.ten.columns
+  @include span-columns(10)
+.eleven.columns
+  @include span-columns(11)
+.twelve.columns
+  @include span-columns(12)
+.row
+  @include row
+
+// floats
+.left
+  float: left
+.right
+  float: right
+
+// spaces
+.space-quarter
+  height: 0.25rem
+.space-half
+  height: 0.5rem
+.space-one
+  height: 1rem
+.space-one-and-a-half
+  height: 1.5rem
+.space-two
+  height: 2rem
+.space-two-and-a-half
+  height: 2.5rem
+.space-three
+  height: 3rem
+
+// forms
+form
+  .field
+    margin-bottom: 1rem
+    label
+      display: block
+      font-weight: 600
+    input
+      width: 100%
+    .hint
+      padding: 0 0.35rem
+
+// footer
+@import "compass/layout/sticky-footer"
+@include sticky-footer(40px, "#root", "#root_footer", "#footer")
+
+$footer-spacing: 8px
+$footer-borders: 1px solid #ccc
+
+.footer
+  font-size: 0.875rem
+
+  // links in footer
+  ul.links
+    float: left
+    li
+      display: inline
+      padding-right: $footer-spacing
+      margin-right: $footer-spacing
+      border-right: $footer-borders
+      &:last-of-type
+        border-right: none
+
+  // greeting and maker's name in footer
+  .greeting
+    float: right
+    span:not(:first-of-type)
+      padding-left: $footer-spacing
+      margin-left: $footer-spacing
+      border-left: $footer-borders
+
+// links
+a
+  text-decoration: none
+
+// Muted text
+.muted
+  color: $muted-text
+
+// text align
+.text-center
+  text-align: center
+.text-right
+  text-align: right
+
+// buttons
+.primary-button
+  @include primary-button
+.secondary-button
+  @include secondary-button

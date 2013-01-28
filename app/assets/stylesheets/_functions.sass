@@ -1,0 +1,62 @@
+// sass functions
+@function black($opacity)
+  @return rgba(black, $opacity)
+
+@function white($opacity)
+  @return rgba(white, $opacity)
+
+// mixins
+// @include box-emboss(0.8, 0.05)
+@mixin box-emboss($opacity, $opacity2)
+  box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0
+
+@mixin letterpress($opacity)
+  text-shadow: white($opacity) 0 1px 0
+
+@mixin hide-text
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+// Source: Sacha Greif - http://sachagreif.com/useful-sass-mixins/
+
+@mixin button
+  padding: 0.875rem
+  text-align: center
+  border-radius: 5px
+  cursor: pointer
+  line-height: 1
+  border: 0
+
+@mixin primary-button
+  @include button
+  padding: 1.25rem
+  color: #ddd
+  background: $primary
+  &:hover
+    background: lighten($primary, 5%)
+    color: #f9f9f9
+
+@mixin secondary-button
+  @include button
+  background: black(0.1)
+  color: #494949
+  &:hover
+    background: black(0.2)
+    color: #393939
+
+// Make a box pop out
+@mixin pop-out
+  @include box-shadow(0 1px 5px black(0.3))
+
+// Make a box pop in
+@mixin pop-in
+  @include box-shadow(inset 0 1px 3px black(0.9))
+
+// Make a button pop-out usually, and pop in when clicked
+@mixin pop-button
+  @include pop-out
+  &:active
+    @include pop-in
+
+@mixin muted
+  color: #7f7f7f

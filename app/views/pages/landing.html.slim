@@ -1,0 +1,26 @@
+.landing
+  .signup
+    .title = image_tag('Weinexoten.png')
+    .subtitle
+      span Geniesen Sie regelmäßig ausgesuchte Weine
+      span von erlesenen Weingütern rund um die Welt.
+
+    .subtitle2 Mit Weinexoten gehen Sie auf eine Geschmacksreise durch die erlesensten Weingüter der neuen Welt.
+
+    / Signup form
+    #signup-formular
+      .bescheid-sagen Wir schreiben Ihnen wenn es soweit ist
+      - subscriber = Subscriber.new
+      = form_for subscriber, remote: true do |f|
+        = f.text_field :email, autofocus: true, autocomplete: 'off', placeholder: 'team@weinexoten.com'
+        br
+        = f.submit 'Benachrichtigen Sie mich', class: 'button', id: 'submit-button'
+      .no-spam Eine einzige Nachricht wenn es losgeht.
+
+    #thank-you style='display: none'
+      .space-one
+      .vielen-dank Vielen Dank!
+      .bescheid-sagen-2 Wir sagen Ihnen Bescheid wenn es los geht.
+      em Ihr Weinexoten-Team
+      .space-half
+      div = mail_to 'team@weinexoten.com', "Schreiben&nbsp;Sie&nbsp;uns".html_safe, encode: 'javascript'

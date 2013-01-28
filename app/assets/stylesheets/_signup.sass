@@ -1,0 +1,63 @@
+.signup
+  @include span-columns(8)
+  @include shift(2)
+  margin-top: 2rem
+  text-align: center
+
+  .title
+    img
+      max-width: 100%
+  .subtitle
+    font-size: 1.5rem
+    line-height: 1.35
+    margin-top: 0.5rem
+    span
+      display: block
+
+  .subtitle2
+    margin: 2rem 0 1.6rem
+    font-size: 1.25rem
+    font-style: italic
+  .pitch
+    margin: 1rem 0
+  .formular
+  .bescheid-sagen
+    font-weight: 600
+    font-size: 1.1rem
+    margin-bottom: 0.15rem
+  #subscriber_email
+    max-width: 100%
+    width: 420px
+    font-size: 1.25rem
+    padding: 10px 12px
+    border-radius: 2px
+    border: 2px solid #ccc
+    outline: 0
+    text-align: center
+    background: #f1f1f1
+    &:focus
+      border-color: $primary
+      background: #f9f9f9
+  .button
+    margin-top: 0.7rem
+    @include primary-button
+    padding: 1rem 1.618rem
+    @include pop-button
+  .no-spam
+    margin-top: 0.3rem
+    @include muted
+    font-size: 0.9375rem
+
+  #thank-you
+    .vielen-dank
+      font-size: 1.25rem
+      font-weight: 600
+
+@include media(max-width 769px)
+  html
+    font-size: 92.5%
+  .signup
+    @include span-columns(12)
+    @include shift(0)
+    .subtitle span
+      display: inline

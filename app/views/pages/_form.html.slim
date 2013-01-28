@@ -1,0 +1,21 @@
+/ Email signup form
+#email-signup-form
+  / form
+  - subscriber = Subscriber.new
+  = form_for subscriber, remote: true do |f|
+    = f.text_field :email,
+      autofocus: true,
+      autocomplete: off,
+      placeholder: 'team@prelaucher.dev'
+
+    = f.submit 'I want to know more', class: 'submit-button'
+
+  / success note
+  #success-note
+    h3 You're awesome!
+    p You'll be one of the first people to know when we launch. See you then.
+    p Team Prelauncher
+
+    div
+      = mail_to 'team@prelauncher.dev', 'Get in touch'
+
