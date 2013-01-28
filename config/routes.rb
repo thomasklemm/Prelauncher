@@ -1,4 +1,5 @@
-Weinexoten::Application.routes.draw do
+Prelauncher::Application.routes.draw do
+  # Create mails
   resources :subscribers, only: :create
 
   # Static pages

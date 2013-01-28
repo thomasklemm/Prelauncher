@@ -1,13 +1,8 @@
-Weinexoten::Application.configure do
+Prelauncher::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
-  # Default URL Host
-  # required by Swiftype
-  Rails.application.routes.default_url_options[:host] = 'weinexoten.dev'
-
   # Default actiomailer url host
-  # required by devise
-  config.action_mailer.default_url_options = { host: 'weinexoten.dev' }
+  config.action_mailer.default_url_options = { host: 'prelauncher.dev' }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

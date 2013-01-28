@@ -1,9 +1,8 @@
 // Experiments in SASS
 //
 // Our very own variables
-$body-fonts: 'proxima-nova', Arial, 'Helvetica Neue', Helvetica, sans-serif
+$body-fonts: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
 $text: #393939        // primary text
-$muted-text: #7f7f7f  // muted text
 $radius: 2px          // default border radius
 
 // Colors
@@ -136,23 +135,12 @@ $footer-borders: 1px solid #ccc
   font-size: 0.875rem
 
   // links in footer
-  ul.links
-    float: left
-    li
-      display: inline
+  ul li
+    display: inline
+    &:not(:last-of-type)
       padding-right: $footer-spacing
       margin-right: $footer-spacing
       border-right: $footer-borders
-      &:last-of-type
-        border-right: none
-
-  // greeting and maker's name in footer
-  .greeting
-    float: right
-    span:not(:first-of-type)
-      padding-left: $footer-spacing
-      margin-left: $footer-spacing
-      border-left: $footer-borders
 
 // links
 a
@@ -160,7 +148,7 @@ a
 
 // Muted text
 .muted
-  color: $muted-text
+  @include muted
 
 // text align
 .text-center
@@ -169,7 +157,17 @@ a
   text-align: right
 
 // buttons
-.primary-button
-  @include primary-button
-.secondary-button
-  @include secondary-button
+.button
+  @include button
+
+// inputs and text areas
+input[type=text], textarea
+  // resets
+  outline: 0
+  border: 0
+
+  padding: 1rem
+  border: 3px solid #ccc
+  &:focus
+    border-color: $primary
+

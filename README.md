@@ -5,6 +5,11 @@ A nice and easily deployable prelaunch signup page for your startup.
 # Getting started
 - Download this repository as a ZIP-File
 - Rename the folder. The app will be available at `http://folder_name.dev`.
+- Install and update the gems.
+```shell
+$ bundle install
+$ bundle update
+```
 - Install [Pow] if you haven't already.
 - Install [Powder] if you haven't already.
 - Link the app.
@@ -52,6 +57,7 @@ $ git push production master
 $ heroku logs -t
 ```
 - Browse your Heroku app to see if everything is working.
+- Add New Relic availability monitoring to prevent dyno idling. Go to New Relic from your Heroku apps page and set it in Settings > Availibility Monitoring. Every 10 minutes is plenty.
 
 # Customizing
 

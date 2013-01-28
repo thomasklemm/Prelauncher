@@ -1,9 +1,5 @@
-Weinexoten::Application.configure do
+Prelauncher::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
-  # Default URL Host
-  #  required by Swiftype
-  Rails.application.routes.default_url_options[:host] = 'weinexoten.com'
 
   # Code is not reloaded between requests
   config.cache_classes = true

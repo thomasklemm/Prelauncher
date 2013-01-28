@@ -9,14 +9,14 @@ gem 'puma', '>= 2.0.0.b4'
 # Rails
 gem 'rails', '3.2.11'
 
-# Mongoid
+# Mongoid (MongoDB ORM)
 gem 'mongoid'
 gem 'bson_ext'
 
 # jQuery Rails (jQuery Adapter for Rails)
 gem 'jquery-rails'
 
-# High Voltage (Static Pages)
+# High Voltage (Static Pages in Rails)
 gem 'high_voltage'
 
 # Slim (Templating)

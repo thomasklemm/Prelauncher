@@ -5,17 +5,17 @@
   = form_for subscriber, remote: true do |f|
     = f.text_field :email,
       autofocus: true,
-      autocomplete: off,
-      placeholder: 'team@prelaucher.dev'
+      autocomplete: 'off',
+      placeholder: 'prelauncher@tklemm.eu'
 
     = f.submit 'I want to know more', class: 'submit-button'
 
   / success note
-  #success-note
+  #success-note style='display: none'
     h3 You're awesome!
-    p You'll be one of the first people to know when we launch. See you then.
-    p Team Prelauncher
+    p: em You'll be one of the first people to know when we launch. See you then.
+    p: b: em Team Prelauncher
 
     div
-      = mail_to 'team@prelauncher.dev', 'Get in touch'
+      = mail_to 'prelauncher@tklemm.eu', 'Get in touch'
 

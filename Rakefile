@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Weinexoten::Application.load_tasks
+Prelauncher::Application.load_tasks

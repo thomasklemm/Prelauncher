@@ -3,4 +3,4 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 # Middleware to gzip responses
 use Rack::Deflater
-run Weinexoten::Application
+run Prelauncher::Application

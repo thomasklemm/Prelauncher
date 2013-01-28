@@ -1,13 +1,10 @@
 / footer
 .footer.container
-  ul.links
-    li = mail_to 'team@weinexoten.com', "Schreiben&nbsp;Sie&nbsp;uns".html_safe, encode: 'javascript'
-    li = link_to 'Impressum', 'http://www.exportspecialists.de/impressum'
+  ul.left
+    li = mail_to 'prelauncher@tklemm.eu', 'Get in touch'
 
-
-  span.greeting
-    span
-      ' &copy; 2013 Ein Projekt von
-      = link_to'Export Specialists', 'http://www.exportspecialists.de/'
-
-    span Made with &hearts; in Germany
+  ul.right
+    li
+      ' A prelaunch subscription page by
+      = link_to 'Thomas Klemm', 'http://tklemm.eu'
+    li Made with &hearts; in Germany

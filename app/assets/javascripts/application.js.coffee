@@ -2,9 +2,8 @@
 # load jQuery beforehand
 //= require jquery_ujs
 
-# Weinexoten
+# Prelauncher
 $ ->
-  ##
   # Flash messages
   # Close on click
   $('.flash-message .close').click ->
@@ -13,8 +12,12 @@ $ ->
   $('.flash-message').click ->
     $(this).fadeOut()
 
-  $('#submit-button').click (e) ->
-    e.preventDefault()
+  # Hide form on submit
+  # and display success note
+  $('#new_subscriber').submit ->
     $this = $(this)
-    $this.parents('#signup-formular').hide()
-    $('#thank-you').show()
+    email = $this.children('#subscriber_email').val()
+    if email?
+      if email isnt ''
+        $this.hide()
+        $('#success-note').show()
