@@ -61,6 +61,10 @@ Prelauncher is ready-made for a quick and easy [Heroku] deployment. These are th
 
 - Add a SECRET_TOKEN config variable
   ```shell
+  # Either
+  $ rake secret
+  # => random secure string to copy
+  # or 
   $ rails console
   SecureRandom.hex(48)
   # => 123123.........123123; Copy this string and exit the rails console
